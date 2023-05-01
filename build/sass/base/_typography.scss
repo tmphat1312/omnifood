@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: var(--fz-2xs);
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    line-height: var(--lh-content);
+    color: var(--clr-grey-5);
+}
+
+p {
+    line-height: var(--lh-paragraph);
+    color: var(--clr-grey-4);
+}
+
+%heading {
+    font-weight: var(--fw-bold);
+    margin-block-end: 0.8em;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: var(--fz-l);
+}

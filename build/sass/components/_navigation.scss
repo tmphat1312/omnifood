@@ -1,0 +1,20 @@
+.navigation {
+    font-size: var(--fz-xs);
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: var(--metric-3xm);
+    align-items: center;
+
+    transition: color var(--trs-quick), text-shadow var(--trs-quick);
+
+    &__link:is(:visited, :link) {
+        text-decoration: none;
+        color: var(--clr-grey-5);
+        font-weight: var(--fw-medium);
+
+        &:hover {
+            color: var(--clr-primary);
+            text-shadow: var(--shadow);
+        }
+    }
+}
