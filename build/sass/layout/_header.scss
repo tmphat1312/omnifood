@@ -1,0 +1,8 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: var(--metric-2xm);
+    padding-inline: var(--metric-l);
+    background-color: var(--clr-tint-1);
+}

@@ -1,0 +1,75 @@
+.intro {
+    background-color: var(--clr-tint-1);
+    padding-block: var(--metric-3xm);
+
+    &-inner {
+        padding-inline: var(--metric-xm);
+        max-width: 130rem;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: var(--metric-2xl);
+    }
+
+    &__slogan {
+        font-size: var(--fz-s);
+        margin-block-end: var(--metric-3xm);
+    }
+
+    &__buttons {
+        font-size: var(--fz-s);
+        display: flex;
+        gap: var(--metric-m);
+        margin-block-end: var(--metric-xl);
+    }
+
+    &__delivered-meals {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--fz-s);
+        font-weight: var(--fw-medium);
+    }
+
+    &__customers {
+        display: flex;
+
+        & > * {
+            margin-right: -1.6rem;
+        }
+    }
+}
+
+.featured {
+    padding-block: var(--metric-3xm);
+    padding-inline: var(--metric-2xm);
+
+    &-inner {
+        max-width: 120rem;
+        margin-inline: auto;
+    }
+
+    &__heading {
+        font-size: var(--fz-3xs);
+        font-weight: var(--fw-medium);
+        font-style: italic;
+        text-transform: uppercase;
+        color: var(--clr-grey-1);
+        text-align: center;
+        margin-block-end: 1.6em;
+    }
+
+    &__sites {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__site {
+        max-width: 20%;
+        height: 3.2rem;
+        width: auto;
+        filter: brightness(0);
+        opacity: 0.5;
+    }
+}

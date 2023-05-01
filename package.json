@@ -1,0 +1,26 @@
+{
+    "name": "omi-food",
+    "version": "1.0.0",
+    "description": "A project for practice purpose after completing the Master CSS course by Jonas.io",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass -wr build/sass/main.scss src/css/style.css",
+        "task-live-server": "live-server --port=8080 --browser=chrome --open=./src --verbose --ignore=node_modules --watch=src/index.html,src/css/*.css --no-css-inject",
+        "start:css-dev": "npm-run-all --parallel watch:sass task-live-server",
+        "start": "npm-run-all start:css-dev",
+        "compile:sass": "node-sass build/sass/main.scss src/css/style.comp.css",
+        "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
+        "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
+        "build:css": "npm-run-all compile:sass prefix:css compress:css",
+        "build": "npm-run-all build:css"
+    },
+    "author": "Minh Phat",
+    "license": "MIT",
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "live-server": "^1.2.2",
+        "node-sass": "^8.0.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^10.1.0"
+    }
+}
