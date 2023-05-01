@@ -67,7 +67,10 @@ Medium: 11px
     --fz-2xs: 1.6rem;
     --fz-xs: 1.8rem;
     --fz-s: 2rem;
+    --fz-xm: 3rem;
+    --fz-3xm: 4.4rem;
     --fz-l: 5.2rem;
+    --fz-3xl: 8.6rem;
 
     --lh-content: 1;
     --lh-s: 1.05;
@@ -102,9 +105,12 @@ Medium: 11px
     --clr-grey-3: #6f6f6f; // grey on #fdf2e9
     --clr-grey-4: #555;
     --clr-grey-5: #333;
+    --clr-grey-6: #ddd;
     --clr-focus: #e67d2280;
     --clr-active: lightblue;
 
     --trs-quick: 150ms;
     --trs-gradual: 250ms;
+
+    --max-content-width: 120rem;
 }

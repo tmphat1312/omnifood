@@ -66,7 +66,10 @@ Medium: 11px
   --fz-2xs: 1.6rem;
   --fz-xs: 1.8rem;
   --fz-s: 2rem;
+  --fz-xm: 3rem;
+  --fz-3xm: 4.4rem;
   --fz-l: 5.2rem;
+  --fz-3xl: 8.6rem;
   --lh-content: 1;
   --lh-s: 1.05;
   --lh-m: 1.2;
@@ -95,10 +98,12 @@ Medium: 11px
   --clr-grey-3: #6f6f6f;
   --clr-grey-4: #555;
   --clr-grey-5: #333;
+  --clr-grey-6: #ddd;
   --clr-focus: #e67d2280;
   --clr-active: lightblue;
   --trs-quick: 150ms;
-  --trs-gradual: 250ms; }
+  --trs-gradual: 250ms;
+  --max-content-width: 120rem; }
 
 /* Box sizing rules */
 *,
@@ -121,7 +126,9 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul,
+ol {
   margin: 0; }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -177,6 +184,13 @@ select {
     outline-style: unset; }
 
 html {
+  scroll-behavior: smooth; }
+
+::selection {
+  background-color: var(--clr-tint-3);
+  color: var(--clr-tint-1); }
+
+html {
   font-size: 62.5%; }
 
 body {
@@ -190,12 +204,28 @@ p {
   line-height: var(--lh-paragraph);
   color: var(--clr-grey-4); }
 
-.heading-1 {
+.heading-1, .heading-2, .heading-3, .sub-heading {
   font-weight: var(--fw-bold);
+  line-height: var(--lh-m);
   margin-block-end: 0.8em; }
 
 .heading-1 {
-  font-size: var(--fz-l); }
+  font-size: var(--fz-l);
+  line-height: var(--lh-s); }
+
+.heading-2 {
+  font-size: var(--fz-3xm); }
+
+.heading-3 {
+  font-size: var(--fz-xm); }
+
+.sub-heading {
+  font-size: var(--fz-2xs);
+  font-weight: var(--fw-medium);
+  color: var(--clr-primary);
+  letter-spacing: var(--lts-span-m);
+  text-transform: uppercase;
+  display: block; }
 
 .strong-number {
   color: var(--clr-shade-1);
@@ -307,7 +337,7 @@ p {
   padding-block: var(--metric-3xm);
   padding-inline: var(--metric-2xm); }
   .featured-inner {
-    max-width: 120rem;
+    max-width: var(--max-content-width);
     margin-inline: auto; }
   .featured__heading {
     font-size: var(--fz-3xs);
@@ -327,3 +357,31 @@ p {
     width: auto;
     filter: brightness(0);
     opacity: 0.5; }
+
+.how-it-works {
+  padding-block: var(--metric-2xl); }
+  .how-it-works-inner {
+    max-width: var(--max-content-width);
+    margin-inline: auto; }
+  .how-it-works__heading {
+    margin-block-end: var(--metric-2xl); }
+  .how-it-works .instruction {
+    display: grid;
+    grid-row-gap: var(--metric-2xl); }
+    .how-it-works .instruction__step {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+      grid-column-gap: var(--metric-l); }
+    .how-it-works .instruction__step-num {
+      font-size: var(--fz-3xl);
+      font-weight: var(--fw-bold);
+      color: var(--clr-grey-6); }
+    .how-it-works .instruction__detail {
+      font-size: var(--fz-xs); }
+    .how-it-works .instruction__illustration {
+      width: 35%;
+      max-width: 35%; }
+    .how-it-works .instruction__step:nth-child(even) .instruction__illustration {
+      order: -1; }
