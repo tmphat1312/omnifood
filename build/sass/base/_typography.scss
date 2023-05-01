@@ -19,10 +19,32 @@ p {
 
 %heading {
     font-weight: var(--fw-bold);
+    line-height: var(--lh-m);
     margin-block-end: 0.8em;
 }
 
 .heading-1 {
     @extend %heading;
     font-size: var(--fz-l);
+    line-height: var(--lh-s);
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: var(--fz-3xm);
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: var(--fz-xm);
+}
+
+.sub-heading {
+    @extend %heading;
+    font-size: var(--fz-2xs);
+    font-weight: var(--fw-medium);
+    color: var(--clr-primary);
+    letter-spacing: var(--lts-span-m);
+    text-transform: uppercase;
+    display: block;
 }

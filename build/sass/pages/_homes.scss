@@ -45,7 +45,7 @@
     padding-inline: var(--metric-2xm);
 
     &-inner {
-        max-width: 120rem;
+        max-width: var(--max-content-width);
         margin-inline: auto;
     }
 
@@ -71,5 +71,51 @@
         width: auto;
         filter: brightness(0);
         opacity: 0.5;
+    }
+}
+
+.how-it-works {
+    padding-block: var(--metric-2xl);
+
+    &-inner {
+        max-width: var(--max-content-width);
+        margin-inline: auto;
+    }
+
+    &__heading {
+        margin-block-end: var(--metric-2xl);
+    }
+
+    .instruction {
+        display: grid;
+        grid-row-gap: var(--metric-2xl);
+        &__step {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+            grid-column-gap: var(--metric-l);
+        }
+
+        &__step-num {
+            font-size: var(--fz-3xl);
+            font-weight: var(--fw-bold);
+            color: var(--clr-grey-6);
+        }
+
+        &__detail {
+            font-size: var(--fz-xs);
+        }
+
+        &__illustration {
+            width: 35%;
+            max-width: 35%;
+        }
+
+        &__step:nth-child(even) {
+            .instruction__illustration {
+                order: -1;
+            }
+        }
     }
 }
