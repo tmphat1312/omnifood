@@ -1,4 +1,28 @@
 .strong-number {
-    color: var(--clr-shade-1);
     font-weight: var(--fw-bold);
+    color: inherit;
+
+    &--primary {
+        color: var(--clr-shade-1);
+    }
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.mb-xm {
+    margin-block-end: var(--metric-xm) !important;
+}
+
+.mb-3xm {
+    margin-block-end: var(--metric-3xm) !important;
+}
+
+.mb-l {
+    margin-block-end: var(--metric-l) !important;
+}
+
+.mb-xl {
+    margin-block-end: var(--metric-xl) !important;
 }

@@ -1,3 +1,8 @@
+.inner-box {
+    max-width: var(--max-content-width);
+    margin-inline: auto;
+}
+
 .intro {
     background-color: var(--clr-tint-1);
     padding-block: var(--metric-3xm);
@@ -5,7 +10,6 @@
     &-inner {
         padding-inline: var(--metric-xm);
         max-width: 130rem;
-        margin-inline: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: var(--metric-2xl);
@@ -44,11 +48,6 @@
     padding-block: var(--metric-3xm);
     padding-inline: var(--metric-2xm);
 
-    &-inner {
-        max-width: var(--max-content-width);
-        margin-inline: auto;
-    }
-
     &__heading {
         font-size: var(--fz-3xs);
         font-weight: var(--fw-medium);
@@ -76,11 +75,6 @@
 
 .how-it-works {
     padding-block: var(--metric-2xl);
-
-    &-inner {
-        max-width: var(--max-content-width);
-        margin-inline: auto;
-    }
 
     &__heading {
         margin-block-end: var(--metric-2xl);
@@ -117,5 +111,241 @@
                 order: -1;
             }
         }
+    }
+}
+
+.meals {
+    padding-block: var(--metric-2xl);
+
+    &__heading {
+        margin-block-end: var(--metric-2xl);
+    }
+
+    &__details {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: var(--metric-xl);
+        margin-block-end: var(--metric-3xm);
+    }
+
+    .dishes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: var(--metric-l);
+    }
+
+    .dish {
+        box-shadow: var(--shadow);
+        border-radius: var(--brs-m);
+        overflow: hidden;
+        transition: transform var(--trs-gradual);
+
+        &:hover {
+            transform: translateY(-2%);
+        }
+
+        &__detail {
+            padding: var(--metric-2xm);
+        }
+
+        &__tags {
+            margin-block-end: var(--metric-2xs);
+        }
+
+        &__name {
+            font-size: var(--fz-m);
+            font-weight: var(--fw-medium);
+            color: var(--clr-grey-5);
+            margin-block-end: var(--metric-xm);
+        }
+
+        &__stat {
+            font-size: var(--fz-xs);
+            margin-block-end: var(--metric-xm);
+
+            display: flex;
+            align-items: center;
+        }
+
+        &__icon {
+            fill: var(--clr-primary);
+            width: 2.4rem;
+            aspect-ratio: 1;
+            margin-inline-end: var(--metric-s);
+        }
+    }
+
+    .diets {
+        display: flex;
+        flex-direction: column;
+        gap: var(--metric-m);
+        padding-inline-start: var(--metric-s);
+    }
+
+    .diet {
+        font-size: var(--fz-xs);
+        display: flex;
+        align-items: center;
+        gap: var(--metric-xm);
+        color: var(--clr-grey-4);
+
+        &::before {
+            content: '+';
+            font-size: var(--fz-xm);
+            color: var(--clr-primary);
+        }
+    }
+}
+
+.testimonials {
+    background-color: var(--clr-tint-1);
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    &-inner {
+        padding: var(--metric-2xl);
+    }
+
+    .customer-testimonials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: var(--metric-2xm);
+    }
+
+    .customer-testimonial {
+        color: var(--clr-grey-4);
+
+        &__text {
+            font-size: var(--fz-xs);
+            padding-block: var(--metric-m);
+        }
+
+        &__name {
+            color: var(--clr-grey-3);
+
+            &::before {
+                content: '\2014';
+                margin-inline-end: var(--metric-xs);
+            }
+        }
+    }
+}
+
+.pricing {
+    padding-block: var(--metric-2xl);
+
+    &__plans {
+        display: grid;
+        grid-auto-flow: column;
+        justify-items: center;
+
+        margin-block: var(--metric-l) var(--metric-3xm);
+    }
+
+    &__benefits {
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: var(--metric-2xm);
+        }
+    }
+}
+
+.sign-up {
+    color: var(--clr-shade-2);
+    font-size: var(--fz-xs);
+    padding-block-end: var(--metric-2xl);
+    border-block-end: 0.2rem solid var(--clr-grey-6);
+
+    & > * {
+        color: inherit;
+    }
+
+    &-inner {
+        background-color: var(--clr-tint-3);
+        background-image: linear-gradient(
+            to right,
+            var(--clr-tint-3),
+            var(--clr-primary)
+        );
+        border-radius: var(--brs-m);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        overflow: hidden;
+    }
+
+    &__form-box {
+        padding: var(--metric-l);
+        padding-block-start: var(--metric-3xm);
+    }
+
+    &__customer {
+        max-height: 60rem;
+        background-image: linear-gradient(
+                to right bottom,
+                rgba(235, 151, 78, 0.35),
+                rgba(230, 125, 34, 0.35)
+            ),
+            url(../../assets/images/eating.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.footer {
+    padding-block: var(--metric-2xl);
+    font-size: var(--fz-2xs);
+    color: var(--clr-grey-2);
+
+    &-inner {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: var(--metric-xm);
+    }
+
+    &__logo {
+        margin-block-end: var(--metric-xm);
+        display: block;
+    }
+
+    &__heading {
+        font-size: var(--fz-xs);
+        font-weight: var(--fw-medium);
+        margin-block-end: var(--metric-xm);
+        color: var(--clr-grey-4);
+    }
+
+    &__list {
+        display: grid;
+        grid-gap: var(--metric-m);
+
+        & a {
+            text-decoration: none;
+            color: inherit;
+            font-size: inherit;
+
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+    }
+
+    .social-media {
+        display: flex;
+        gap: var(--metric-m);
+        margin-block-end: var(--metric-3xm);
+
+        .social-medium {
+            width: 2.4rem;
+            transition: transform var(--trs-quick);
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+    .copyright {
+        font-size: var(--fz-3xs);
     }
 }

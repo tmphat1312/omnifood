@@ -1,0 +1,20 @@
+.gallery {
+    padding-inline: var(--metric-m);
+    padding-block: var(--metric-2xm);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--metric-m);
+
+    &__photo-box {
+        overflow: hidden;
+    }
+
+    &__photo {
+        object-fit: cover;
+        transition: transform var(--trs-gradual);
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

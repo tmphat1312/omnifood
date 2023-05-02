@@ -14,7 +14,7 @@ body {
 
 p {
     line-height: var(--lh-paragraph);
-    color: var(--clr-grey-4);
+    color: inherit;
 }
 
 %heading {
@@ -37,6 +37,13 @@ p {
 .heading-3 {
     @extend %heading;
     font-size: var(--fz-xm);
+}
+
+.heading-5 {
+    @extend %heading;
+    font-size: var(--fz-xs);
+    color: var(--clr-grey-4);
+    font-weight: var(--fw-normal);
 }
 
 .sub-heading {

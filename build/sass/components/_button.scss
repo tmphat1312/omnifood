@@ -30,7 +30,7 @@
     &--white {
         color: var(--clr-grey-5);
         background-color: #fff;
-        border: 0.24rem solid #fff;
+        border: 0.28rem solid #fff;
 
         &:hover {
             background-color: var(--clr-tint-1);
@@ -39,7 +39,10 @@
 
     &--text {
         color: var(--clr-primary);
-        border-block-end: 0.2rem solid currentColor;
+        border-block-end: 0.1rem solid currentColor;
+        padding: 0.32em;
+        border-radius: unset;
+        font-weight: var(--fw-normal);
 
         &:hover {
             border-block-end-color: transparent;
