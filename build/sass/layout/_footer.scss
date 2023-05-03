@@ -1,0 +1,93 @@
+.footer {
+    padding-block: var(--metric-2xl);
+    font-size: var(--fz-2xs);
+    color: var(--clr-grey-2);
+
+    &-inner {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: var(--metric-2xm);
+        grid-row-gap: var(--metric-l);
+
+        @media screen and (max-width: $breakpoint-m) {
+            grid-template-columns: repeat(6, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
+
+        @media screen and (max-width: $breakpoint-s) {
+            grid-template-columns: repeat(4, 1fr);
+            align-items: start;
+        }
+    }
+
+    &__logo {
+        margin-block-end: var(--metric-xm);
+        display: block;
+    }
+
+    &__heading {
+        font-size: var(--fz-xs);
+        font-weight: var(--fw-medium);
+        margin-block-end: var(--metric-xm);
+        color: var(--clr-grey-4);
+    }
+
+    &__section {
+        @media screen and (max-width: $breakpoint-m) {
+            &:is(:nth-child(n)) {
+                grid-column: span 2;
+            }
+
+            &:is(:nth-child(n + 3)) {
+                order: -1;
+            }
+
+            &:is(:first-child) {
+                grid-column: 2 / 4;
+                grid-row: 2 / 3;
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-s) {
+            &:is(:first-child) {
+                grid-column: 1 / -1;
+                grid-row: 1 / 2;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-gap: var(--metric-m);
+
+        & a {
+            text-decoration: none;
+            color: inherit;
+            font-size: inherit;
+
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+    }
+
+    .social-media {
+        display: flex;
+        gap: var(--metric-m);
+        margin-block-end: var(--metric-3xm);
+
+        .social-medium {
+            width: 2.4rem;
+            transition: transform var(--trs-quick);
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+    .copyright {
+        font-size: var(--fz-3xs);
+    }
+}

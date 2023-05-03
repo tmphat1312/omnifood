@@ -1,0 +1,5 @@
+@mixin respond-screen($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
