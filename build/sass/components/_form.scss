@@ -4,12 +4,17 @@
     grid-gap: var(--metric-2xm);
     align-items: end;
 
+    &__label,
+    &__submit,
+    &__select {
+        cursor: pointer;
+    }
+
     &__label {
         display: block;
         padding-block: var(--metric-xs);
         font-weight: var(--fw-medium);
         font-size: var(--fz-xs);
-        cursor: pointer;
     }
 
     &__input {

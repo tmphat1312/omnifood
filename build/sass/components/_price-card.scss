@@ -59,13 +59,7 @@
         color: var(--clr-grey-4);
         display: flex;
         align-items: center;
-        gap: var(--metric-m);
-
-        &::before {
-            content: '\2022';
-            font-size: var(--fz-3xm);
-            color: var(--clr-primary);
-        }
+        gap: var(--metric-xm);
     }
 
     &__best-value-tag {

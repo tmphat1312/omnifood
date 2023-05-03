@@ -2,11 +2,10 @@
     &__icon {
         padding: var(--metric-m);
         margin-block-end: var(--metric-s);
-        width: 6.4rem;
+        font-size: 3.2rem;
         aspect-ratio: 1;
         border-radius: 50%;
         background-color: var(--clr-tint-1);
-        fill: var(--clr-primary);
     }
 
     &__desc {

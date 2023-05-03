@@ -11,20 +11,29 @@
     <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
 
     <title>Omnifood &mdash; Never cook again!</title>
+
+    <script async type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script async nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="./js/index.js"></script>
 </head>
 
 <body href="#" class="container">
     <header class="header">
-        <a href="#" class="logo-container">
-            <img src="../assets/images/omnifood-logo.png" alt="Omnifood logo" decoding="async" loading="eager" class="logo">
-        </a>
-        <nav class="navigation">
-            <a href="#how-it-works" class="navigation__link">How it works?</a>
-            <a href="#meals" class="navigation__link">Meals</a>
-            <a href="#testimonials" class="navigation__link">Testimonials</a>
-            <a href="#pricing" class="navigation__link">Pricing</a>
-            <a href="#sign-up" class="btn btn--primary">Try for free</a>
-        </nav>
+        <div class="inner-box header-inner">
+            <a href="#" class="logo-container">
+                <img src="../assets/images/omnifood-logo.png" alt="Omnifood logo" decoding="async" loading="eager" class="logo">
+            </a>
+            <nav class="navigation">
+                <a href="#how-it-works" class="navigation__link">How it works?</a>
+                <a href="#meals" class="navigation__link">Meals</a>
+                <a href="#testimonials" class="navigation__link">Testimonials</a>
+                <a href="#pricing" class="navigation__link">Pricing</a>
+                <a href="#sign-up" class="btn btn--primary">Try for free</a>
+            </nav>
+            <button class="navigation-toggler-box">
+                <div class="navigation-toggler"></div>
+            </button>
+        </div>
     </header>
 
     <main class="main">
@@ -154,21 +163,15 @@
                                 <p class="dish__name">Japanese Gyozas</p>
                                 <ul class="dish__stats">
                                     <li class="dish__stat">
-                                        <svg class="dish__icon">
-                                            <use href="../assets/images/sprites.svg#icon-fire"></use>
-                                        </svg>
+                                        <ion-icon class="dish__icon" name="flame-outline"></ion-icon>
                                         <span class="strong-number">650 &nbsp;</span>calories
                                     </li>
                                     <li class="dish__stat">
-                                        <svg class="dish__icon">
-                                            <use href="../assets/images/sprites.svg#icon-forkandknife"></use>
-                                        </svg>
+                                        <ion-icon class="dish__icon" name="restaurant-outline"></ion-icon>
                                         NutriScore &reg; &nbsp;<span class="strong-number">74</span>
                                     </li>
                                     <li class="dish__stat">
-                                        <svg class="dish__icon">
-                                            <use href="../assets/images/sprites.svg#icon-star_outline"></use>
-                                        </svg>
+                                        <ion-icon class="dish__icon" name="star-outline"></ion-icon>
                                         <span class="strong-number">4.9 &nbsp;</span> rating (537)
                                     </li>
                                 </ul>
@@ -184,21 +187,15 @@
                                 <p class="dish__name">Avocado Salad</p>
                                 <ul class="dish__stats">
                                     <li class="dish__stat">
-                                        <svg class="dish__icon">
-                                            <use href="../assets/images/sprites.svg#icon-fire"></use>
-                                        </svg>
+                                        <ion-icon class="dish__icon" name="flame-outline"></ion-icon>
                                         <span class="strong-number">400 &nbsp;</span> calories
                                     </li>
                                     <li class="dish__stat">
-                                        <svg class="dish__icon">
-                                            <use href="../assets/images/sprites.svg#icon-forkandknife"></use>
-                                        </svg>
+                                        <ion-icon class="dish__icon" name="restaurant-outline"></ion-icon>
                                         NutriScore &reg; &nbsp;<span class="strong-number">92</span>
                                     </li>
                                     <li class="dish__stat">
-                                        <svg class="dish__icon">
-                                            <use href="../assets/images/sprites.svg#icon-star_outline"></use>
-                                        </svg>
+                                        <ion-icon class="dish__icon" name="star-outline"></ion-icon>
                                         <span class="strong-number">4.8 &nbsp;</span> rating (441)
                                     </li>
                                 </ul>
@@ -208,15 +205,33 @@
                     <section class="meals__with-diets">
                         <h3 class="heading-3">Works with any diet:</h3>
                         <ul class="diets">
-                            <li class="diet">Vegetarian</li>
-                            <li class="diet">Vegan</li>
-                            <li class="diet">Pescatarian</li>
-                            <li class="diet">Gluten-free</li>
-                            <li class="diet">Lactose-free</li>
-                            <li class="diet">Keto</li>
-                            <li class="diet">Paleo</li>
-                            <li class="diet">Low FODMAP</li>
-                            <li class="diet">Kid-friendly</li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Vegetarian
+                            </li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Vegan
+                            </li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Pescatarian
+                            </li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Gluten-free
+                            </li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Lactose-free
+                            </li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Keto
+                            </li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Paleo
+                            </li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Low FODMAP
+                            </li>
+                            <li class="diet">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon> Kid-friendly
+                            </li>
                         </ul>
                     </section>
                 </div>
@@ -307,10 +322,18 @@
                         <p class="price-card__value">399</p>
                         <p class="price-card__desc">per month. That's just $13 per meal!</p>
                         <ul class="price-card__gets">
-                            <li class="price-card__get">1 meal per day</li>
-                            <li class="price-card__get">Order from 11am to 9pm</li>
-                            <li class="price-card__get">Delivery is free</li>
-                            <li class="price-card__get"></li>
+                            <li class="price-card__get">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon>1 meal per day
+                            </li>
+                            <li class="price-card__get">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon>Order from 11am to 9pm
+                            </li>
+                            <li class="price-card__get">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon>Delivery is free
+                            </li>
+                            <li class="price-card__get">
+                                <ion-icon class="icon icon--primary icon--3x" name="close-outline"></ion-icon>
+                            </li>
                         </ul>
                         <a href="#sign-up" class="btn btn--primary price-card__btn">Start eating well</a>
                     </li>
@@ -320,10 +343,18 @@
                         <p class="price-card__value">649</p>
                         <p class="price-card__desc">per month. That's just $11 per meal!</p>
                         <ul class="price-card__gets">
-                            <li class="price-card__get">2 meals per day</li>
-                            <li class="price-card__get">Order 24/7</li>
-                            <li class="price-card__get">Delivery is free</li>
-                            <li class="price-card__get">Get access to latest recipes</li>
+                            <li class="price-card__get">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon>2 meals per day
+                            </li>
+                            <li class="price-card__get">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon>Order 24/7
+                            </li>
+                            <li class="price-card__get">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon>Delivery is free
+                            </li>
+                            <li class="price-card__get">
+                                <ion-icon class="icon icon--primary icon--3x" name="checkmark-outline"></ion-icon>Get access to latest recipes
+                            </li>
                         </ul>
                         <a href="#sign-up" class="btn btn--primary price-card__btn">Start eating well</a>
                     </li>
@@ -334,36 +365,36 @@
                     </h5>
                     <ul class="benefits">
                         <li class="benefit">
-                            <svg class="benefit__icon">
-                                <use href="../assets/images/sprites.svg#icon-infinite"></use>
-                            </svg>
+                            <div class="benefit__icon-box">
+                                <ion-icon class="benefit__icon icon icon--primary icon--4x" name="infinite-outline"></ion-icon>
+                            </div>
                             <h3 class="heading-3">Never cook again!</h3>
                             <p class="benefit__desc">
                                 Our subscriptions cover 365 days per year, even including major holidays.
                             </p>
                         </li>
                         <li class="benefit">
-                            <svg class="benefit__icon">
-                                <use href="../assets/images/sprites.svg#icon-tree"></use>
-                            </svg>
+                            <div class="benefit__icon-box">
+                                <ion-icon class="benefit__icon icon icon--primary icon--4x" name="nutrition-outline"></ion-icon>
+                            </div>
                             <h3 class="heading-3">Local and organic</h3>
                             <p class="benefit__desc">
                                 Our cooks only use local, fresh, and organic products to prepare your meals.
                             </p>
                         </li>
                         <li class="benefit">
-                            <svg class="benefit__icon">
-                                <use href="../assets/images/sprites.svg#icon-leaf"></use>
-                            </svg>
+                            <div class="benefit__icon-box">
+                                <ion-icon class="benefit__icon icon icon--primary icon--4x" name="leaf-outline"></ion-icon>
+                            </div>
                             <h3 class="heading-3">No waste</h3>
                             <p class="benefit__desc">
                                 All our partners only use reusable containers to package all your meals.
                             </p>
                         </li>
                         <li class="benefit">
-                            <svg class="benefit__icon">
-                                <use href="../assets/images/sprites.svg#icon-pause"></use>
-                            </svg>
+                            <div class="benefit__icon-box">
+                                <ion-icon class="benefit__icon icon icon--primary icon--4x" name="pause-outline"></ion-icon>
+                            </div>
                             <h3 class="heading-3">Pause anytime</h3>
                             <p class="benefit__desc">
                                 Going on vacation? Just pause your subscription, and we refund unused days.
@@ -392,7 +423,7 @@
                         </div>
                         <div class="form__group">
                             <label for="media" class="form__label">What did you hear from us?</label>
-                            <select id="media" name="media" class="form__input">
+                            <select id="media" name="media" class="form__input form__select">
                                 <option value="" selected>-- Please select one of these options -- </option>
                                 <option value="friend-family">Friends and Family</option>
                                 <option value="YouTube">YouTube video</option>
@@ -413,7 +444,7 @@
 
     <footer class="footer">
         <div class="inner-box footer-inner">
-            <div class="footer__follow-us">
+            <div class="footer__section">
                 <a href="#" class="logo-container footer__logo">
                     <img src="../assets/images/omnifood-logo.png" alt="Omnifood logo" class="logo">
                 </a>

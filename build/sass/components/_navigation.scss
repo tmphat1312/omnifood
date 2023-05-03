@@ -2,19 +2,100 @@
     font-size: var(--fz-xs);
     display: grid;
     grid-auto-flow: column;
-    grid-gap: var(--metric-3xm);
+    grid-gap: var(--metric-2xm);
     align-items: center;
 
-    transition: color var(--trs-quick), text-shadow var(--trs-quick);
-
     &__link:is(:visited, :link) {
-        text-decoration: none;
         color: var(--clr-grey-5);
         font-weight: var(--fw-medium);
+        transition: color var(--trs-quick), text-shadow var(--trs-quick);
+        text-decoration: none;
 
         &:hover {
             color: var(--clr-primary);
             text-shadow: var(--shadow);
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-m) {
+        display: none;
+        position: fixed;
+        inset: 0;
+        grid-auto-flow: row;
+        place-content: center;
+        justify-items: center;
+        background-color: rgba($color: #fff, $alpha: 0.6);
+        backdrop-filter: blur(10px);
+        font-size: var(--fz-m);
+        z-index: 1;
+
+        &.active {
+            display: grid;
+        }
+    }
+}
+
+.navigation-toggler-box {
+    background-color: transparent;
+    padding-inline: unset;
+    border: none;
+    height: 4.8rem;
+    aspect-ratio: 1;
+    position: relative;
+    color: var(--clr-grey-3);
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: $breakpoint-m) {
+        &,
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.navigation-toggler {
+    content: '';
+    --height: 0.4rem;
+    height: var(--height);
+    background-color: currentColor;
+    border-radius: 100rem;
+    transition: background-color var(--trs-quick);
+
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        height: var(--height);
+        background-color: currentColor;
+        border-radius: 100rem;
+        transition: transform var(--trs-gradual), inset var(--trs-quick);
+        transform-origin: center;
+        position: absolute;
+        inset-inline: 0;
+    }
+
+    &::before {
+        inset-block-start: var(--height);
+    }
+
+    &::after {
+        inset-block-end: var(--height);
+    }
+
+    @media screen and (max-width: $breakpoint-m) {
+        &.active {
+            background-color: transparent;
+            &::before {
+                inset-block-start: 50%;
+                transform: rotate(135deg) translateY(50%);
+            }
+
+            &::after {
+                inset-block-end: 50%;
+                transform: rotate(-135deg) translateY(-50%);
+            }
         }
     }
 }

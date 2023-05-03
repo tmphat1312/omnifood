@@ -5,6 +5,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--metric-m);
 
+    @media screen and (max-width: $breakpoint-m) {
+        grid-template-columns: repeat(6, 1fr);
+        padding-inline: var(--metric-2xl);
+    }
+
     &__photo-box {
         overflow: hidden;
     }

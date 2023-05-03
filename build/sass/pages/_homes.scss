@@ -1,11 +1,13 @@
 .inner-box {
     max-width: var(--max-content-width);
     margin-inline: auto;
+    padding-inline: var(--metric-xm);
 }
 
 .intro {
     background-color: var(--clr-tint-1);
     padding-block: var(--metric-3xm);
+    min-height: calc(100vh - 9.6rem);
 
     &-inner {
         padding-inline: var(--metric-xm);
@@ -13,6 +15,14 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: var(--metric-2xl);
+        align-items: center;
+
+        @media screen and (max-width: $breakpoint-m) {
+            grid-template-columns: 1fr;
+            padding-inline: var(--metric-xl);
+            text-align: center;
+            grid-gap: var(--metric-xm);
+        }
     }
 
     &__slogan {
@@ -24,22 +34,43 @@
         font-size: var(--fz-s);
         display: flex;
         gap: var(--metric-m);
+        flex-wrap: wrap;
         margin-block-end: var(--metric-xl);
+
+        @media screen and (max-width: $breakpoint-m) {
+            margin-block-end: var(--metric-3xm);
+            justify-content: center;
+        }
     }
 
     &__delivered-meals {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
         font-size: var(--fz-s);
         font-weight: var(--fw-medium);
+
+        @media screen and (max-width: $breakpoint-m) {
+            gap: var(--metric-3xm);
+            justify-content: center;
+        }
     }
 
     &__customers {
+        --offset: 1.6rem;
         display: flex;
+        padding-right: var(--offset);
 
         & > * {
-            margin-right: -1.6rem;
+            margin-right: calc(-1 * var(--offset));
+        }
+    }
+
+    &__imgs {
+        @media screen and (max-width: $breakpoint-m) {
+            width: 70%;
+            justify-self: center;
         }
     }
 }
@@ -70,6 +101,14 @@
         width: auto;
         filter: brightness(0);
         opacity: 0.5;
+
+        @media screen and (max-width: $breakpoint-m) {
+            height: 2.8rem;
+        }
+
+        @media screen and (max-width: $breakpoint-s) {
+            height: 1.6rem;
+        }
     }
 }
 
@@ -83,12 +122,29 @@
     .instruction {
         display: grid;
         grid-row-gap: var(--metric-2xl);
+
         &__step {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             justify-items: center;
             align-items: center;
-            grid-column-gap: var(--metric-l);
+            grid-gap: var(--metric-l);
+
+            &:nth-child(even) {
+                .instruction__illustration {
+                    order: -1;
+                }
+            }
+
+            @media screen and (max-width: $breakpoint-s) {
+                grid-template-columns: 1fr;
+
+                &:nth-child(even) {
+                    .instruction__illustration {
+                        order: 0;
+                    }
+                }
+            }
         }
 
         &__step-num {
@@ -105,12 +161,6 @@
             width: 35%;
             max-width: 35%;
         }
-
-        &__step:nth-child(even) {
-            .instruction__illustration {
-                order: -1;
-            }
-        }
     }
 }
 
@@ -124,14 +174,19 @@
     &__details {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-column-gap: var(--metric-xl);
+        grid-gap: var(--metric-xl);
         margin-block-end: var(--metric-3xm);
+
+        @media screen and (max-width: $breakpoint-m) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
     }
 
     .dishes {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: var(--metric-l);
+        grid-template-columns: repeat(auto-fit, minmax(25rem, auto));
+        grid-gap: var(--metric-l);
     }
 
     .dish {
@@ -168,8 +223,8 @@
         }
 
         &__icon {
-            fill: var(--clr-primary);
-            width: 2.4rem;
+            color: var(--clr-primary);
+            font-size: 2.4rem;
             aspect-ratio: 1;
             margin-inline-end: var(--metric-s);
         }
@@ -188,12 +243,6 @@
         align-items: center;
         gap: var(--metric-xm);
         color: var(--clr-grey-4);
-
-        &::before {
-            content: '+';
-            font-size: var(--fz-xm);
-            color: var(--clr-primary);
-        }
     }
 }
 
@@ -201,19 +250,38 @@
     background-color: var(--clr-tint-1);
     display: grid;
     grid-template-columns: 55% 45%;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint-m) {
+        grid-template-columns: 1fr;
+    }
 
     &-inner {
         padding: var(--metric-2xl);
+
+        @media screen and (max-width: $breakpoint-s) {
+            padding-block-end: var(--metric-m);
+        }
     }
 
     .customer-testimonials {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: var(--metric-2xm);
+
+        @media screen and (max-width: $breakpoint-s) {
+            grid-template-columns: 1fr;
+        }
     }
 
     .customer-testimonial {
         color: var(--clr-grey-4);
+
+        @media screen and (max-width: $breakpoint-s) {
+            display: grid;
+            justify-items: center;
+            text-align: center;
+        }
 
         &__text {
             font-size: var(--fz-xs);
@@ -236,8 +304,9 @@
 
     &__plans {
         display: grid;
-        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fit, minmax(36rem, auto));
         justify-items: center;
+        grid-gap: var(--metric-2xm);
 
         margin-block: var(--metric-l) var(--metric-3xm);
     }
@@ -247,6 +316,15 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: var(--metric-2xm);
+
+            @media screen and (max-width: $breakpoint-m) {
+                grid-template-columns: repeat(2, 1fr);
+                padding-inline: var(--metric-xm);
+            }
+
+            @media screen and (max-width: $breakpoint-s) {
+                grid-template-columns: 1fr;
+            }
         }
     }
 }
@@ -255,6 +333,7 @@
     color: var(--clr-shade-2);
     font-size: var(--fz-xs);
     padding-block-end: var(--metric-2xl);
+    padding-inline: var(--metric-xm);
     border-block-end: 0.2rem solid var(--clr-grey-6);
 
     & > * {
@@ -268,10 +347,15 @@
             var(--clr-tint-3),
             var(--clr-primary)
         );
+        padding-inline: unset;
         border-radius: var(--brs-m);
         display: grid;
         grid-template-columns: 2fr 1fr;
         overflow: hidden;
+
+        @media screen and (max-width: $breakpoint-m) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__form-box {
@@ -289,63 +373,9 @@
             url(../../assets/images/eating.jpg);
         background-size: cover;
         background-position: center;
-    }
-}
 
-.footer {
-    padding-block: var(--metric-2xl);
-    font-size: var(--fz-2xs);
-    color: var(--clr-grey-2);
-
-    &-inner {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: var(--metric-xm);
-    }
-
-    &__logo {
-        margin-block-end: var(--metric-xm);
-        display: block;
-    }
-
-    &__heading {
-        font-size: var(--fz-xs);
-        font-weight: var(--fw-medium);
-        margin-block-end: var(--metric-xm);
-        color: var(--clr-grey-4);
-    }
-
-    &__list {
-        display: grid;
-        grid-gap: var(--metric-m);
-
-        & a {
-            text-decoration: none;
-            color: inherit;
-            font-size: inherit;
-
-            &:hover {
-                text-decoration-line: underline;
-            }
+        @media screen and (max-width: $breakpoint-m) {
+            display: none;
         }
-    }
-
-    .social-media {
-        display: flex;
-        gap: var(--metric-m);
-        margin-block-end: var(--metric-3xm);
-
-        .social-medium {
-            width: 2.4rem;
-            transition: transform var(--trs-quick);
-
-            &:hover {
-                transform: scale(1.15);
-            }
-        }
-    }
-
-    .copyright {
-        font-size: var(--fz-3xs);
     }
 }
