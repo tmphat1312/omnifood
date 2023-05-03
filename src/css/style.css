@@ -819,6 +819,7 @@ p {
   .header.fixed {
     position: fixed;
     inset-inline: 0;
+    inset-block-start: 0;
     box-shadow: var(--shadow);
     background-color: #fff;
     z-index: 3; }

@@ -15,15 +15,22 @@ document.addEventListener('click', ({ target }) => {
     }
 });
 
-window.addEventListener('scroll', function () {
-    const introHeight = document.querySelector('.intro').offsetHeight;
+window.addEventListener('scroll', handleStickyHeader);
+window.addEventListener('load', handleStickyHeader);
+
+function handleStickyHeader({ target }) {
+    const intro = document.querySelector('.intro');
+    const introHeight = intro.offsetHeight;
+    const headerHeight = header.offsetHeight;
     const introTop = document
         .querySelector('.intro')
         .getBoundingClientRect().top;
 
-    if (introTop < -introHeight) {
+    if (introTop < headerHeight - introHeight) {
         header.classList.add('fixed');
+        intro.style.marginTop = `${headerHeight}px`;
     } else {
         header.classList.remove('fixed');
+        intro.style.marginTop = 'unset';
     }
-});
+}
