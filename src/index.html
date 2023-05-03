@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs.">
 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.webmanifest">
 
     <title>Omnifood &mdash; Never cook again!</title>
 
@@ -17,11 +23,15 @@
     <script defer src="./js/index.js"></script>
 </head>
 
-<body href="#" class="container">
+<body class="container">
     <header class="header">
         <div class="inner-box header-inner">
             <a href="#" class="logo-container">
-                <img src="../assets/images/omnifood-logo.png" alt="Omnifood logo" decoding="async" loading="eager" class="logo">
+                <picture>
+                    <source srcset="../assets/images/omnifood-logo-small.webp" type="image/webp">
+                    <source srcset="../assets/images/omnifood-logo-small.png" type="image/png">
+                    <img src="../assets/images/omnifood-logo-small.png" alt="Omnifood logo" decoding="async" loading="eager" class="logo">
+                </picture>
             </a>
             <nav class="navigation">
                 <a href="#how-it-works" class="navigation__link">How it works?</a>
@@ -30,9 +40,9 @@
                 <a href="#pricing" class="navigation__link">Pricing</a>
                 <a href="#sign-up" class="btn btn--primary">Try for free</a>
             </nav>
-            <button class="navigation-toggler-box">
+            <div class="navigation-toggler-box" tabindex="0">
                 <div class="navigation-toggler"></div>
-            </button>
+            </div>
         </div>
     </header>
 
@@ -54,18 +64,42 @@
                     </div>
                     <div class="intro__delivered-meals">
                         <div class="intro__customers">
-                            <img src="../assets/images/customers/customer-1.jpg" alt="Customer 1"
-                                class="customer-photo customer-photo--48 customer-photo--border">
-                            <img src="../assets/images/customers/customer-2.jpg" alt="Customer 2"
-                                class="customer-photo customer-photo--48 customer-photo--border">
-                            <img src="../assets/images/customers/customer-3.jpg" alt="Customer 3"
-                                class="customer-photo customer-photo--48 customer-photo--border">
-                            <img src="../assets/images/customers/customer-4.jpg" alt="Customer 4"
-                                class="customer-photo customer-photo--48 customer-photo--border">
-                            <img src="../assets/images/customers/customer-5.jpg" alt="Customer 5"
-                                class="customer-photo customer-photo--48 customer-photo--border">
-                            <img src="../assets/images/customers/customer-6.jpg" alt="Customer 6"
-                                class="customer-photo customer-photo--48 customer-photo--border">
+                            <picture>
+                                <source srcset="../assets/images/customers/customer-1.webp" type="image/webp">
+                                <source srcset="../assets/images/customers/customer-1.png" type="image/png">
+                                <img class="customer-photo customer-photo--48 customer-photo--border" src="../assets/images/customers/customer-1.png"
+                                    alt="Customer 1" decoding="async">
+                            </picture>
+                            <picture>
+                                <source srcset="../assets/images/customers/customer-2.webp" type="image/webp">
+                                <source srcset="../assets/images/customers/customer-2.png" type="image/png">
+                                <img class="customer-photo customer-photo--48 customer-photo--border" src="../assets/images/customers/customer-2.png"
+                                    alt="Customer 2" decoding="async">
+                            </picture>
+                            <picture>
+                                <source srcset="../assets/images/customers/customer-3.webp" type="image/webp">
+                                <source srcset="../assets/images/customers/customer-3.png" type="image/png">
+                                <img class="customer-photo customer-photo--48 customer-photo--border" src="../assets/images/customers/customer-3.png"
+                                    alt="Customer 3" decoding="async">
+                            </picture>
+                            <picture>
+                                <source srcset="../assets/images/customers/customer-4.webp" type="image/webp">
+                                <source srcset="../assets/images/customers/customer-4.png" type="image/png">
+                                <img class="customer-photo customer-photo--48 customer-photo--border" src="../assets/images/customers/customer-4.png"
+                                    alt="Customer 4" decoding="async">
+                            </picture>
+                            <picture>
+                                <source srcset="../assets/images/customers/customer-5.webp" type="image/webp">
+                                <source srcset="../assets/images/customers/customer-5.png" type="image/png">
+                                <img class="customer-photo customer-photo--48 customer-photo--border" src="../assets/images/customers/customer-5.png"
+                                    alt="Customer 5" decoding="async">
+                            </picture>
+                            <picture>
+                                <source srcset="../assets/images/customers/customer-6.webp" type="image/webp">
+                                <source srcset="../assets/images/customers/customer-6.png" type="image/png">
+                                <img class="customer-photo customer-photo--48 customer-photo--border" src="../assets/images/customers/customer-6.png"
+                                    alt="Customer 6" decoding="async">
+                            </picture>
                         </div>
                         <p class="intro__meals-count">
                             <span class="strong-number strong-number--primary">250,000+ </span>
@@ -75,10 +109,9 @@
                 </div>
                 <div class="intro__imgs">
                     <picture>
-                        <source srcset="../assets/hero.png" type="img/png">
-                        <img src="../assets/images/hero.png"
-                            alt="A woman enjoying lunch in a green space, delicious Asian food, great lunch box with healthy grain" loading="lazy"
-                            decoding="async">
+                        <source srcset="../assets/images/hero-small.webp" type="image/webp">
+                        <source srcset="../assets/images/hero-small.png" type="image/png">
+                        <img src="../assets/images/hero-small.png" alt="Omnifood logo" decoding="async" class="logo">
                     </picture>
                 </div>
             </div>
@@ -88,11 +121,31 @@
             <div class="inner-box">
                 <h4 class="featured__heading">As featured in</h4>
                 <div class="featured__sites">
-                    <img src="../assets/images/logos/techcrunch.png" alt="Site featured Omnifood 1" class="featured__site">
-                    <img src="../assets/images/logos/business-insider.png" alt="Site featured Omnifood 2" class="featured__site">
-                    <img src="../assets/images/logos/the-new-york-times.png" alt="Site featured Omnifood 4" class="featured__site">
-                    <img src="../assets/images/logos/forbes.png" alt="Site featured Omnifood 3" class="featured__site">
-                    <img src="../assets/images/logos/usa-today.png" alt="Site featured Omnifood 5" class="featured__site">
+                    <picture>
+                        <source srcset="../assets/images/logos/techcrunch.webp" type="image/webp">
+                        <source srcset="../assets/images/logos/techcrunch.png" type="image/png">
+                        <img src="../assets/images/logos/techcrunch.png" alt="Site featured Omnifood 1" class="featured__site">
+                    </picture>
+                    <picture>
+                        <source srcset="../assets/images/logos/business-insider.webp" type="image/webp">
+                        <source srcset="../assets/images/logos/business-insider.png" type="image/png">
+                        <img src="../assets/images/logos/business-insider.png" alt="Site featured Omnifood 2" class="featured__site">
+                    </picture>
+                    <picture>
+                        <source srcset="../assets/images/logos/the-new-york-times.webp" type="image/webp">
+                        <source srcset="../assets/images/logos/the-new-york-times.png" type="image/png">
+                        <img src="../assets/images/logos/the-new-york-times.png" alt="Site featured Omnifood 4" class="featured__site">
+                    </picture>
+                    <picture>
+                        <source srcset="../assets/images/logos/forbes.webp" type="image/webp">
+                        <source srcset="../assets/images/logos/forbes.png" type="image/png">
+                        <img src="../assets/images/logos/forbes.png" alt="Site featured Omnifood 3" class="featured__site">
+                    </picture>
+                    <picture>
+                        <source srcset="../assets/images/logos/usa-today.webp" type="image/webp">
+                        <source srcset="../assets/images/logos/usa-today.png" type="image/png">
+                        <img src="../assets/images/logos/usa-today.png" alt="Site featured Omnifood 5" class="featured__site">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -116,7 +169,11 @@
                                 you. It makes sure you get all the nutrients and vitamins you need, no matter what diet you follow!
                             </p>
                         </div>
-                        <img src="../assets/images/app/app-screen-1.png" alt="" class="instruction__illustration">
+                        <picture class="instruction__illustration">
+                            <source srcset="../assets/images/app/app-screen-1.webp" type="image/webp">
+                            <source srcset="../assets/images/app/app-screen-1.png" type="image/png">
+                            <img src="../assets/images/app/app-screen-1.png" alt="Telling Omnifood what you like (and what not)">
+                        </picture>
                     </li>
                     <li class="instruction__step">
                         <div class="instruction__text">
@@ -129,7 +186,11 @@
                                 ingredients, swap entire meals, or even add your own recipes.
                             </p>
                         </div>
-                        <img src="../assets/images/app/app-screen-2.png" alt="" class="instruction__illustration">
+                        <picture class="instruction__illustration">
+                            <source srcset="../assets/images/app/app-screen-2.webp" type="image/webp">
+                            <source srcset="../assets/images/app/app-screen-2.png" type="image/png">
+                            <img src="../assets/images/app/app-screen-2.png" alt="Subscribe to Omnifood weekly meal plan">
+                        </picture>
                     </li>
                     <li class="instruction__step">
                         <div class="instruction__text">
@@ -142,7 +203,11 @@
                                 you. You can change delivery schedule and address daily!
                             </p>
                         </div>
-                        <img src="../assets/images/app/app-screen-3.png" alt="" class="instruction__illustration">
+                        <picture class="instruction__illustration">
+                            <source srcset="../assets/images/app/app-screen-3.webp" type="image/webp">
+                            <source srcset="../assets/images/app/app-screen-3.png" type="image/png">
+                            <img src="../assets/images/app/app-screen-3.png" alt="Receive meals prepare for you by Omnifood staff">
+                        </picture>
                     </li>
                 </ul>
             </div>
@@ -155,7 +220,11 @@
                 <div class="meals__details">
                     <ul class="dishes">
                         <li class="dish">
-                            <img src="../assets/images/meals/meal-1.jpg" alt="Japanese Gyozas" class="dish__img">
+                            <picture>
+                                <source srcset="../assets/images/meals/meal-1.webp" type="image/webp">
+                                <source srcset="../assets/images/meals/meal-1.png" type="image/png">
+                                <img src="../assets/images/meals/meal-1.jpg" alt="Japanese Gyozas" class="dish__img">
+                            </picture>
                             <div class="dish__detail">
                                 <ul class="dish__tags">
                                     <li class="tag tag--green">vegetarian</li>
@@ -178,7 +247,11 @@
                             </div>
                         </li>
                         <li class="dish">
-                            <img src="../assets/images/meals/meal-2.jpg" alt="Avocado Salad" class="dish__img">
+                            <picture>
+                                <source srcset="../assets/images/meals/meal-2.webp" type="image/webp">
+                                <source srcset="../assets/images/meals/meal-2.png" type="image/png">
+                                <img src="../assets/images/meals/meal-2.jpg" alt="Avocado Salad" class="dish__img">
+                            </picture>
                             <div class="dish__detail">
                                 <ul class="dish__tags">
                                     <li class="tag tag--light-green">vegan</li>
@@ -247,25 +320,41 @@
                 <h2 class="heading-2">Once you try it, you can't go back</h2>
                 <ul class="customer-testimonials">
                     <li class="customer-testimonial">
-                        <img src="../assets/images/customers/dave.jpg" alt="Dave Bryson" class="customer-photo customer-photo--64">
+                        <picture>
+                            <source srcset="../assets/images/customers/dave.webp" type="image/webp">
+                            <source srcset="../assets/images/customers/dave.jpg" type="image/jpg">
+                            <img src="../assets/images/customers/dave.jpg" alt="Dave Bryson" class="customer-photo customer-photo--64">
+                        </picture>
                         <p class="customer-testimonial__text">Inexpensive, healthy and great-tasting meals, without even having to order manually! It
                             feels truly magical.</p>
                         <p class="customer-testimonial__name">Dave Bryson</p>
                     </li>
                     <li class="customer-testimonial">
-                        <img src="../assets/images/customers/ben.jpg    " alt="Ben Hadley" class="customer-photo customer-photo--64">
+                        <picture>
+                            <source srcset="../assets/images/customers/ben.webp" type="image/webp">
+                            <source srcset="../assets/images/customers/ben.jpg" type="image/jpg">
+                            <img src="../assets/images/customers/ben.jpg    " alt="Ben Hadley" class="customer-photo customer-photo--64">
+                        </picture>
                         <p class="customer-testimonial__text">The AI algorithm is crazy good, it chooses the right meals for me every time. It's
                             amazing not to worry about food anymore!</p>
                         <p class="customer-testimonial__name">Ben Hadley</p>
                     </li>
                     <li class="customer-testimonial">
-                        <img src="../assets/images/customers/steve.jpg" alt="Steve Miller" class="customer-photo customer-photo--64">
+                        <picture>
+                            <source srcset="../assets/images/customers/steve.webp" type="image/webp">
+                            <source srcset="../assets/images/customers/steve.jpg" type="image/jpg">
+                            <img src="../assets/images/customers/steve.jpg" alt="Steve Miller" class="customer-photo customer-photo--64">
+                        </picture>
                         <p class="customer-testimonial__text">Omnifood is a life saver! I just started a company, so there's no time for cooking. I
                             couldn't live without my daily meals now!</p>
                         <p class="customer-testimonial__name">Steve Miller</p>
                     </li>
                     <li class="customer-testimonial">
-                        <img src="../assets/images/customers/hannah.jpg" alt="Hannah Smith" class="customer-photo customer-photo--64">
+                        <picture>
+                            <source srcset="../assets/images/customers/hannah.webp" type="image/webp">
+                            <source srcset="../assets/images/customers/hannah.jpg" type="image/jpg">
+                            <img src="../assets/images/customers/hannah.jpg" alt="Hannah Smith" class="customer-photo customer-photo--64">
+                        </picture>
                         <p class="customer-testimonial__text">I got Omnifood for the whole family, and it frees up so much time! Plus, everything is
                             organic and vegan and without plastic.</p>
                         <p class="customer-testimonial__name">Hanna Smith</p>
@@ -273,42 +362,66 @@
                 </ul>
             </div>
             <div class="gallery">
-                <div class="gallery__photo-box">
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-1.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-1.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-1.jpg" alt="Meal 1" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-2.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-2.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-2.jpg" alt="Meal 2" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-3.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-3.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-3.jpg" alt="Meal 3" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-4.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-4.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-4.jpg" alt="Meal 4" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-5.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-5.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-5.jpg" alt="Meal 5" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-6.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-6.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-6.jpg" alt="Meal 6" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-7.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-7.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-7.jpg" alt="Meal 7" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-8.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-8.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-8.jpg" alt="Meal 8" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-9.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-9.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-9.jpg" alt="Meal 9" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-10.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-10.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-10.jpg" alt="Meal 10" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-11.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-11.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-11.jpg" alt="Meal 11" class="gallery__photo">
-                </div>
-                <div class="gallery__photo-box">
+                </picture>
+                <picture class="gallery__photo-box">
+                    <source srcset="../assets/images/gallery/gallery-12.webp" type="image/webp">
+                    <source srcset="../assets/images/gallery/gallery-12.jpg" type="image/jpg">
                     <img src="../assets/images/gallery/gallery-12.jpg" alt="Meal 12" class="gallery__photo">
-                </div>
+                </picture>
             </div>
         </section>
 
@@ -359,7 +472,7 @@
                         <a href="#sign-up" class="btn btn--primary price-card__btn">Start eating well</a>
                     </li>
                 </ul>
-                <ul class="pricing__benefits">
+                <div class="pricing__benefits">
                     <h5 class="heading-5 text-center mb-xl">
                         Prices include all applicable taxes. You can cancel at any time. Both plans include the following:
                     </h5>
@@ -401,7 +514,7 @@
                             </p>
                         </li>
                     </ul>
-                </ul>
+                </div>
             </div>
         </section>
 
@@ -446,35 +559,24 @@
         <div class="inner-box footer-inner">
             <div class="footer__section">
                 <a href="#" class="logo-container footer__logo">
-                    <img src="../assets/images/omnifood-logo.png" alt="Omnifood logo" class="logo">
+                    <picture>
+                        <source srcset="../assets/images/omnifood-logo-small.webp" type="image/webp">
+                        <source srcset="../assets/images/omnifood-logo-small.png" type="image/png">
+                        <img src="../assets/images/omnifood-logo-small.png" alt="Omnifood logo" decoding="async" loading="eager" class="logo">
+                    </picture>
                 </a>
                 <div class="social-media">
-                    <a href="#" class="social-medium">
-                        <svg id="icon-facebook" class="social-medium-icon" viewBox="0 0 512 512">
-                            <path
-                                d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"
-                                fill-rule="evenodd" />
+                    <a href="#" class="social-medium-link">
+                        <ion-icon class="icon icon--grey icon--3x" name="logo-facebook"></ion-icon>
                     </a>
-                    </svg>
-                    <a class="social-medium">
-                        <svg id="icon-insta" class="social-medium-icon" viewBox="0 0 512 512">
-                            <path
-                                d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z" />
-                            <path
-                                d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z" />
-                        </svg>
+                    <a href="#" class="social-medium-link">
+                        <ion-icon class="icon icon--grey icon--3x" name="logo-instagram"></ion-icon>
                     </a>
-                    <a href="#" class="social-medium">
-                        <svg id="icon-twitter" class="social-medium-icon" viewBox="0 0 512 512">
-                            <path
-                                d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z" />
-                        </svg>
+                    <a href="#" class="social-medium-link">
+                        <ion-icon class="icon icon--grey icon--3x" name="logo-twitter"></ion-icon>
                     </a>
-                    <a href="#" class="social-medium">
-                        <svg id="icon-youtube" class="social-medium-icon" viewBox="0 0 512 512">
-                            <path
-                                d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149 1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9zM207 353.89v-196.5l145 98.2z" />
-                        </svg>
+                    <a href="#" class="social-medium-link">
+                        <ion-icon class="icon icon--grey icon--3x" name="logo-youtube"></ion-icon>
                     </a>
                 </div>
                 <p class="copyright">Copyright &copy; 2023 by Omnifood, Inc. All rights reserved.</p>
@@ -538,6 +640,7 @@
                     </li>
                 </ul>
             </section>
+        </div>
     </footer>
 </body>
 

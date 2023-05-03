@@ -36,15 +36,14 @@
 }
 
 .navigation-toggler-box {
-    background-color: transparent;
-    padding-inline: unset;
-    border: none;
-    height: 4.8rem;
-    aspect-ratio: 1;
+    --box-height: 4.8rem;
+    height: var(--box-height);
+    aspect-ratio: 1 / 1;
     position: relative;
     color: var(--clr-grey-3);
-    z-index: 2;
+    background-color: transparent;
     cursor: pointer;
+    z-index: 2;
     display: none;
 
     @media screen and (max-width: $breakpoint-m) {
@@ -56,12 +55,12 @@
 }
 
 .navigation-toggler {
-    content: '';
     --height: 0.4rem;
     height: var(--height);
     background-color: currentColor;
     border-radius: 100rem;
     transition: background-color var(--trs-quick);
+    margin-top: calc((var(--box-height) - var(--height)) / 2);
 
     &::after,
     &::before {
