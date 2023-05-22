@@ -1,0 +1,42 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--metric-2xm);
+  align-items: end;
+
+  &__label,
+  &__submit,
+  &__select {
+    cursor: pointer;
+  }
+
+  &__label {
+    display: block;
+    padding-block: var(--metric-xs);
+    font-weight: var(--fw-medium);
+    font-size: var(--fz-xs);
+  }
+
+  &__input {
+    width: 100%;
+    border: unset;
+    padding: var(--metric-s);
+    border-radius: var(--brs-common);
+
+    &::placeholder {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1rem var(--clr-tint-2);
+    }
+  }
+
+  &__submit {
+    font-size: var(--fz-s);
+    font-weight: var(--fw-medium);
+    color: var(--clr-tint-1);
+    background-color: var(--clr-shade-2);
+    text-align: center;
+  }
+}

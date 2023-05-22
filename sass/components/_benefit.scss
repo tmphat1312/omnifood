@@ -1,0 +1,14 @@
+.benefit {
+  &__icon {
+    padding: var(--metric-m);
+    margin-block-end: var(--metric-s);
+    font-size: 3.2rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--clr-tint-1);
+  }
+
+  &__desc {
+    font-size: var(--fz-xs);
+  }
+}

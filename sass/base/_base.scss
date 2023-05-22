@@ -1,0 +1,17 @@
+* {
+  transition: box-shadow var(--trs-quick);
+
+  &:is(:focus) {
+    box-shadow: 0 0 0 1rem var(--clr-focus);
+    outline-style: unset;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--clr-tint-3);
+  color: var(--clr-tint-1);
+}

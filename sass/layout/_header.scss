@@ -1,0 +1,22 @@
+.header {
+  background-color: var(--clr-tint-1);
+
+  height: var(--header-block-size);
+
+  &-inner {
+    max-width: 130rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.fixed {
+    position: fixed;
+    inset-inline: 0;
+    inset-block-start: 0;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    z-index: 3;
+  }
+}

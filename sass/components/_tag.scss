@@ -1,0 +1,21 @@
+.tag {
+  font-size: var(--fz-4xs);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  color: var(--clr-grey-5);
+  display: inline-block;
+  padding: var(--metric-2xs);
+  border-radius: 100rem;
+
+  &--green {
+    background-color: #51cf66;
+  }
+
+  &--light-green {
+    background-color: #94d82d;
+  }
+
+  &--pasta {
+    background-color: #ffcf39;
+  }
+}
