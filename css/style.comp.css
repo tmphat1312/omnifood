@@ -143,6 +143,9 @@ select {
 html {
   scroll-behavior: smooth; }
 
+.scroll-section {
+  scroll-margin-top: var(--header-block-size); }
+
 ::selection {
   background-color: var(--clr-tint-3);
   color: var(--clr-tint-1); }
